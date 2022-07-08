@@ -2,8 +2,6 @@
 
 # PFA3IIR5
 
-Simple overview of use/purpose.
-
 ## Description
 
 Application-Web: Gestion des voyages/guide touristique.
