@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSI Travels</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" type="text/css" href="/static/css/datepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/slick/style.css"/>
+    <link rel="stylesheet" href="/static/css/templatemo-style.css">    
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <div class="tm-main-content" id="top">
+            <div class="tm-top-bar-bg"></div>    
+            <div class="tm-top-bar" id="tm-top-bar">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg narbar-light">
+                            <a class="navbar-brand mr-auto" href="#">
+                                <img src="/static/img/logo.png" alt="Site logo">
+                                Journey
+                            </a>
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="{{url_for('index')}}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url_for('topdestination')}}">Top Destinations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url_for('recommended')}}">Recommended Places</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url_for('contact')}}">Contact Us</a>
+                                </li>
+                            </ul>
+                            <a class="nav-link active" href="{{url_for('users')}}">Account<span class="sr-only">(current)</span></a>
+                        </div>
+                        </div>                            
+                    </nav>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- .tm-top-bar -->
+
+<!--Account Page -->
+
+  <div class="account-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <div class="form-container">
+            <div class="form-btn">
+
+              <span onclick="Login()">Register</span>
+              <span onclick="Register()">Login</span>
+              <hr id="Indicator">
+              
+            </div>
+                
+            <form id="LoginForm"  action="{{ url_for('login')}}" method="post">
+                <div class="msg">{{msg}}</div>
+                <input name="username" type="email" placeholder="Email">
+                <input name= "password" type="password" placeholder="Password">
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <form id="RegForm" action="{{ url_for('new_user')}}" method="post">
+                <input name="user" type="text" placeholder="Username">
+                <input name="email"type="email" placeholder="Email">
+                <input name="pass" type="password" placeholder="Password">
+                <input name="age" type="text" placeholder="Age">
+                <input name="phone" type="text" placeholder="Phone Number">
+                <button type="submit" value = "btn" class="btn">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--JS for menu toggle -->
+  <script>
+  var MenuItems = document.getElementById("MenuItems");
+  MenuItems.style.maxHeight = "0px";
+  function clicktoggle(){
+    if(MenuItems.style.maxHeight == "0px"){
+      MenuItems.style.maxHeight = "200px"
+    }else{
+      MenuItems.style.maxHeight = "0px"
+    }
+  }
+  </script>
+  <script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+
+
+    function Register(){
+      RegForm.style.transform = "translateX(0px)" ;
+      LoginForm.style.transform = "translateX(0px)" ;
+      Indicator.style.transform = "translateX(100px)" ;
+    }
+    function Login(){
+      RegForm.style.transform = "translateX(300px)" ;
+      LoginForm.style.transform = "translateX(300px)" ;
+      Indicator.style.transform = "translateX(0px)" ;
+    }
+  </script>
+</body>
+
+</html>

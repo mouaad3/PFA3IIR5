@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSI Travels</title>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/datepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/templatemo-style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <div class="tm-main-content" id="top">
+            <div class="tm-top-bar-bg"></div>    
+            <div class="tm-top-bar" id="tm-top-bar">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg narbar-light">
+                            <a class="navbar-brand mr-auto" href="#">
+                                <img src="/static/img/logo.png" alt="Site logo">
+                                Journey
+                            </a>
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item"> 
+                                    <a class="nav-link " href="{{url_for('index')}}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url_for('topdestination')}}">Top Destinations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="{{url_for('recommended')}}" >Recommended Places<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url_for('contact')}}">Contact Us</a>
+                                </li>
+                            </ul>
+                            <a class="nav-link" href="{{url_for('users')}}">Account</a>
+                        </div>                            
+                    </nav>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- .tm-top-bar -->
+<!--Account Page -->
+
+            <div class="tm-container-outer" id="tm-section-3">
+                <ul class="nav nav-pills tm-tabs-links">
+                    <li class="tm-tab-link-li">
+                        <a href="#1a" data-toggle="tab" class="tm-tab-link">
+                            <img src="/static/img/north-america.png" alt="Image" class="img-fluid">
+                            North America
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#2a" data-toggle="tab" class="tm-tab-link">
+                            <img src="/static/img/south-america.png" alt="Image" class="img-fluid">
+                            South America
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#3a" data-toggle="tab" class="tm-tab-link">
+                            <img src="/static/img/europe.png" alt="Image" class="img-fluid">
+                            Europe
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#4a" data-toggle="tab" class="tm-tab-link "><!-- Current Active Tab -->
+                            <img src="/static/img/asia.png" alt="Image" class="img-fluid">
+                            Asia
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#5a" data-toggle="tab" class="tm-tab-link active">
+                            <img src="/static/img/africa.png" alt="Image" class="img-fluid">
+                            Africa
+                          </br>  Morocco
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#6a" data-toggle="tab" class="tm-tab-link">
+                            <img src="/static/img/australia.png" alt="Image" class="img-fluid">
+                            Australia
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#7a" data-toggle="tab" class="tm-tab-link">
+                            <img src="/static/img/antartica.png" alt="Image" class="img-fluid">
+                            Antartica
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content clearfix">
+                    <div class="tab-pane fade show active" id="4a">
+                    <!-- Current Active Tab WITH "show active" classes in DIV tag -->
+                        <div class="tm-recommended-place-wrap">
+                            <div class="tm-recommended-place">
+                                <img src="/static/img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-text-highlight">Fès</h3>
+                                    <p class="tm-text-gray">Faisant partie des villes impériales du Maroc, elle a été à plusieurs époques la capitale du pays et est considérée de nos jours comme sa capitale spirituelle.</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">700DH</p>
+                                    <p class="tm-recommended-price-link">Continue Reading</p>
+                                </a>                        
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="/static/img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                   <h3 class="tm-text-highlight">Safi</h3>
+                                    <p class="tm-text-gray">La ville de Safi , est une ville du Maroc, située sur le littoral Atlantique. Elle est la capitale de la région Doukkala-Abda et préfecture de sa province.</p>
+                                </div>
+                                <div id="preload-hover-img"></div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">600DH</p>
+                                    <p class="tm-recommended-price-link">Continue Reading</p>
+                                </a>
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="/static/img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-text-highlight">Assilah</h3>
+                                    <p class="tm-text-gray">Assilah est une ville au nord-ouest du Maroc d'environ 30 000 habitants, à une quarantaine de kilomètres de Tanger, dans la préfecture de Tanger-Assilah, région de Tanger-Tétouan-Al Hoceïma.</p>
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">600DH
+                                    <p class="tm-recommended-price-link">Continue Reading</p>
+                                </a>
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="/static/img/tm-img-04.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                   <h3 class="tm-text-highlight">Ouarzazate</h3>
+                                    <p class="tm-text-gray">Ouarzazate est une ville et commune — municipalité — de la province de Ouarzazate (Maroc), dont elle est le chef-lieu, dans la région Draâ Tafilalet. La ville est surnommée « la Porte du désert ».</p>
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">600DH</p>
+                                    <p class="tm-recommended-price-link">Continue Reading</p>
+                                </a>
+                            </div>    
+                        </div>                        
+
+                        <a href="https://afella.club/" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
+                    </div> <!-- tab-pane -->    
+                    </div> <!-- tab-pane -->
+                </div>
+            </div>
+ <!-- .main-content -->
+    <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+    <script src="js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
+    <script src="js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
+    <script src="js/datepicker.min.js"></script>                <!-- https://github.com/qodesmith/datepicker -->
+    <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+    <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
+    <script src="js/jquery.scrollTo.min.js"></script>  
+</body>
+
+</html>
