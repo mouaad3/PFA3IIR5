@@ -8,8 +8,11 @@ Application-Web: Gestion des voyages/guide touristique.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Flaks
+* Flask-MySqlDB
+* PyCharm
+* MySql Workbench
+* Windows
 
 ### Installing
 
